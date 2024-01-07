@@ -1,7 +1,7 @@
 const todos = []
 const RENDER_EVENT = 'render-todo';
 const STORAGE_KEY = 'todos-data'
-const SAVED_EVENT = ''
+const SAVED_EVENT = 'data-saved'
 
 function generateId(){
 	return +new Date()
@@ -35,6 +35,7 @@ function isStorageExist() /* boolean */ {
 }
 
 document.addEventListener(SAVED_EVENT, function () {
+	alert('data berhasil di save')
   console.log(localStorage.getItem(STORAGE_KEY));
 });
 
